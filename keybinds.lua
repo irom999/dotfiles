@@ -55,8 +55,8 @@ return {
     { key = "Tab", mods = "SHIFT|CTRL", action = act.ActivateTabRelative(-1) },
     -- Tab入れ替え
     { key = "{", mods = "LEADER", action = act({ MoveTabRelative = -1 }) },
-    -- Tab新規作成
-    { key = "t", mods = "SUPER", action = act({ SpawnTab = "CurrentPaneDomain" }) },
+    -- Tab新規作成 (ホームディレクトリで開く)
+    { key = "t", mods = "SUPER", action = act.SpawnCommandInNewTab({ args = { "pwsh.exe" }, cwd = wezterm.home_dir }) },
     -- Tabを閉じる
     { key = "w", mods = "SUPER", action = act({ CloseCurrentTab = { confirm = true } }) },
     { key = "}", mods = "LEADER", action = act({ MoveTabRelative = 1 }) },
@@ -69,34 +69,27 @@ return {
     { key = "[", mods = "LEADER", action = act.ActivateCopyMode },
     -- コピー
     { key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },
+    { key = "c", mods = "SHIFT|CTRL", action = act.CopyTo("Clipboard") },
     -- 貼り付け
     { key = "v", mods = "SUPER", action = act.PasteFrom("Clipboard") },
+    { key = "v", mods = "SHIFT|CTRL", action = act.PasteFrom("Clipboard") },
 
-    -- Pane作成 leader + r (水平分割) or v (垂直分割)
     {
       key = "v",
       mods = "LEADER",
-      action = wezterm.action_callback(function(win, pane)
-        win:perform_action(
-          act.SplitVertical({
-            domain = "CurrentPaneDomain",
-            cwd = pane:get_current_working_dir(),
-          }),
-          pane
-        )
+      action = wezterm.action_callback(function(window, pane)
+        local cwd_uri = pane:get_current_working_dir()
+        local cwd = cwd_uri and cwd_uri.file_path or nil
+        window:perform_action(act.SplitVertical({ domain = "CurrentPaneDomain", cwd = cwd }), pane)
       end),
     },
     {
       key = "r",
       mods = "LEADER",
-      action = wezterm.action_callback(function(win, pane)
-        win:perform_action(
-          act.SplitHorizontal({
-            domain = "CurrentPaneDomain",
-            cwd = pane:get_current_working_dir(),
-          }),
-          pane
-        )
+      action = wezterm.action_callback(function(window, pane)
+        local cwd_uri = pane:get_current_working_dir()
+        local cwd = cwd_uri and cwd_uri.file_path or nil
+        window:perform_action(act.SplitHorizontal({ domain = "CurrentPaneDomain", cwd = cwd }), pane)
       end),
     },
     -- Paneを閉じる leader + x

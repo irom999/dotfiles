@@ -2,6 +2,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.default_prog = { "pwsh.exe" }
+config.default_cwd = wezterm.home_dir
 
 config.automatically_reload_config = true
 config.font_size = 12.0

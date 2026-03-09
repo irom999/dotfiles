@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo:*)",
+      "Bash(git:*)",
+      "Bash(powershell:*)",
+      "Read(//c/Users/Yusuke Mori/AppData/Local/nvim/**)",
+      "Read(//c/Users/Yusuke Mori/.config/**)",
+      "Bash(lazygit:*)",
+      "Bash(pwsh.exe:*)"
+    ]
+  }
+}
