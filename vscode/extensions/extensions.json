@@ -551,13 +551,12 @@
     },
     {
         "identifier": {
-            "id": "amazonwebservices.aws-toolkit-vscode"
+            "id": "amazonwebservices.aws-toolkit-vscode",
+            "uuid": "ac5787df-9b2d-441c-abf0-977d62bc66f0"
         },
         "version": "4.8.0",
         "location": {
             "$mid": 1,
-            "fsPath": "/Users/yusuke.mori/.vscode/extensions/amazonwebservices.aws-toolkit-vscode-4.8.0",
-            "external": "file:///Users/yusuke.mori/.vscode/extensions/amazonwebservices.aws-toolkit-vscode-4.8.0",
             "path": "/Users/yusuke.mori/.vscode/extensions/amazonwebservices.aws-toolkit-vscode-4.8.0",
             "scheme": "file"
         },
@@ -569,6 +568,33 @@
             "id": "ac5787df-9b2d-441c-abf0-977d62bc66f0",
             "publisherId": "e5177ad8-ec3b-4d49-aefd-3d3331129b54",
             "publisherDisplayName": "Amazon Web Services",
+            "targetPlatform": "undefined",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "sdras.night-owl"
+        },
+        "version": "2.1.1",
+        "location": {
+            "$mid": 1,
+            "fsPath": "/Users/yusuke.mori/.vscode/extensions/sdras.night-owl-2.1.1",
+            "external": "file:///Users/yusuke.mori/.vscode/extensions/sdras.night-owl-2.1.1",
+            "path": "/Users/yusuke.mori/.vscode/extensions/sdras.night-owl-2.1.1",
+            "scheme": "file"
+        },
+        "relativeLocation": "sdras.night-owl-2.1.1",
+        "metadata": {
+            "installedTimestamp": 1782749371662,
+            "pinned": false,
+            "source": "gallery",
+            "id": "e58f546c-babc-455f-a265-ba40dbd140d4",
+            "publisherId": "addae8ad-0041-44f2-a2d4-cbebe4912d50",
+            "publisherDisplayName": "sarah.drasner",
             "targetPlatform": "undefined",
             "updated": false,
             "private": false,
