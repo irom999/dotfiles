@@ -1,0 +1,10 @@
+{
+    "claudeCode.preferredLocation": "panel",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.tree.indent": 14,
+    "aws.cloudformation.telemetry.enabled": true,
+    "explorer.compactFolders": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}
